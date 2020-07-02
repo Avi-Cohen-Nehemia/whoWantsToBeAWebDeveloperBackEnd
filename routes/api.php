@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("/questions", [Questions::class, "index"]);
+Route::get("/questions/{difficulty}", [Questions::class, "index"]);

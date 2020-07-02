@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        // Questions
+        DB::table('questions')->insert([
+            [
+                'content' => 'What is my name?',
+                'difficulty' => 1,
+            ],
+            [
+                'content' => 'What is my age?',
+                'difficulty' => 1,
+            ],
+        ]);
     }
 }

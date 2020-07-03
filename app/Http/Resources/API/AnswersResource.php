@@ -3,9 +3,8 @@
 namespace App\Http\Resources\API;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\API\AnswersResource;
 
-class QuestionResource extends JsonResource
+class AnswersResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,10 +15,8 @@ class QuestionResource extends JsonResource
     public function toArray($request)
     {
         return [
-            "id" => $this->id,
-            "difficulty" => $this->difficulty,
-            "content" => $this->content,
-            "answers" => AnswersResource::collection($this->answers),
+            "answer" => $this->answer,
+            "correct" => $this->correct,
         ];
     }
 }

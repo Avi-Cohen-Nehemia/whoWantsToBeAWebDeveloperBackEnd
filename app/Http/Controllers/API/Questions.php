@@ -17,7 +17,7 @@ class Questions extends Controller
 
     public function show($difficulty)
     {
-        // will return all the questions with a certain difficulty
-        return QuestionResource::collection(Question::where("difficulty", $difficulty)->get());
+        // will return a random question out of the questions with a certain difficulty
+        return QuestionResource::collection(Question::where("difficulty", $difficulty)->get()->random(1));
     }
 }

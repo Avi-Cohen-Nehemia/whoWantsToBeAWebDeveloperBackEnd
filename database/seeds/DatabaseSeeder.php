@@ -67,7 +67,7 @@ class DatabaseSeeder extends Seeder
             [
                 'question_id' => 3,
                 'answer' => "Poland",
-                "correct" => true,
+                "correct" => false,
             ],
             [
                 'question_id' => 3,
@@ -82,7 +82,7 @@ class DatabaseSeeder extends Seeder
             [
                 'question_id' => 3,
                 'answer' => "Russia",
-                "correct" => false,
+                "correct" => true,
             ],
         ]);
     }

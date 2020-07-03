@@ -16,7 +16,7 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->string('content', 200);
-            $table->enum('difficulty', [1, 2, 3, 5, 10, 20, 40, 80, 160, 320, 640, 1250, 2500, 10000]);
+            $table->enum('difficulty', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]);
             $table->timestamps();
         });
     }

@@ -48,6 +48,38 @@ class DatabaseSeeder extends Seeder
                 'content' => 'In CSS, what are vh and vw?',
                 'difficulty' => 5,
             ],
+            [
+                'content' => 'Which operator returns true if the two compared values are not equal?',
+                'difficulty' => 6,
+            ],
+            [
+                'content' => 'Which statement is the correct way to create a variable called rate and assign it the value 100?',
+                'difficulty' => 6,
+            ],
+            [
+                'content' => 'How would you reference the string \'avenue\' in the code shown?',
+                'difficulty' => 7,
+            ],
+            [
+                'content' => 'When would you use a conditional statement?',
+                'difficulty' => 7,
+            ],
+            [
+                'content' => 'What would be the result in the console of running this code: for (var i=0; i<5; i++){ console.log(i); }',
+                'difficulty' => 8,
+            ],
+            [
+                'content' => 'Which of the following operators can be used to do a short-circuit evaluation?',
+                'difficulty' => 8,
+            ],
+            [
+                'content' => 'What does the following expression evaluate to: [] == []',
+                'difficulty' => 9,
+            ],
+            [
+                'content' => 'Which statement is true about Functional Programming?',
+                'difficulty' => 9,
+            ],
         ]);
 
         // Answers
@@ -260,6 +292,174 @@ class DatabaseSeeder extends Seeder
             [
                 'question_id' => 10,
                 'answer' => "Sudo classes",
+                "correct" => false,
+            ],
+
+            // difficulty 6
+            [
+                'question_id' => 11,
+                'answer' => ">=<",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 11,
+                'answer' => "===",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 11,
+                'answer' => "==!",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 11,
+                'answer' => "!==",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 12,
+                'answer' => "let rate = 100;",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 12,
+                'answer' => "let 100 = rate;",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 12,
+                'answer' => "100 = let rate;",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 12,
+                'answer' => "rate = 100;",
+                "correct" => false,
+            ],
+
+            // difficulty 7
+            [
+                'question_id' => 13,
+                'answer' => "roadTypes.2",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 13,
+                'answer' => "roadTypes[3]",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 13,
+                'answer' => "roadTypes.3",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 13,
+                'answer' => "roadTypes[2]",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 14,
+                'answer' => "When you want to reuse a set of statements multiple times",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 14,
+                'answer' => "When you want your code to choose between multiple options",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 14,
+                'answer' => "When you want to group data together",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 14,
+                'answer' => "When you want to loop through a group of statement",
+                "correct" => false,
+            ],
+
+            // difficulty 8
+            [
+                'question_id' => 15,
+                'answer' => "12345",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 15,
+                'answer' => "1234",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 15,
+                'answer' => "01234",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 15,
+                'answer' => "012345",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 16,
+                'answer' => "++",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 16,
+                'answer' => "%",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 16,
+                'answer' => "==",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 16,
+                'answer' => "||",
+                "correct" => true,
+            ],
+
+            // difficulty 9
+            [
+                'question_id' => 17,
+                'answer' => "True",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 17,
+                'answer' => "False",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 17,
+                'answer' => "undefined",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 17,
+                'answer' => "[]",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 18,
+                'answer' => "Every object in the program has to be a function",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 18,
+                'answer' => "Code is grouped with the state it modifies.",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 18,
+                'answer' => "Side effecs are not allowed",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 18,
+                'answer' => "Everything has to be globally scoped",
                 "correct" => false,
             ],
         ]);

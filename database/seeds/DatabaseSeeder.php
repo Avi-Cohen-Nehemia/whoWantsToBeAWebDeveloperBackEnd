@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
                 'amount' => '2000'
             ],
             [
-                'content' => 'How would you reference the string \'avenue\' in the code shown?',
+                'content' => 'How would you reference the string \'avenue\' in the code shown? let roadTypes = ["street", "road", "avenue", "circle"];',
                 'difficulty' => 7,
                 'amount' => '4000'
             ],

@@ -11,74 +11,92 @@ class DatabaseSeeder extends Seeder
             [
                 'content' => 'Which of the following is the paragraph tag?',
                 'difficulty' => 1,
+                'amount' => '100'
             ],
             [
                 'content' => 'Which of the following is the anchor tag?',
                 'difficulty' => 1,
+                'amount' => '100'
             ],
             [
                 'content' => 'Which of the following is the largest heading tag?',
                 'difficulty' => 2,
+                'amount' => '200'
             ],
             [
                 'content' => 'which tag is used to create an unordered list?',
                 'difficulty' => 2,
+                'amount' => '200'
             ],
             [
                 'content' => 'What is the default file name of a website\'s home page?',
                 'difficulty' => 3,
+                'amount' => '300'
             ],
             [
                 'content' => 'Which attribute prevents the user from submitting an empty input?',
                 'difficulty' => 3,
+                'amount' => '300'
             ],
             [
                 'content' => 'Which of the following CSS syntax will change the <body> background to red?',
                 'difficulty' => 4,
+                'amount' => '500'
             ],
             [
                 'content' => 'Which tag is used for multi-line input?',
                 'difficulty' => 4,
+                'amount' => '500'
             ],
             [
                 'content' => 'What does HTML stand for?',
                 'difficulty' => 5,
+                'amount' => '1000'
             ],
             [
                 'content' => 'In CSS, what are vh and vw?',
                 'difficulty' => 5,
+                'amount' => '1000'
             ],
             [
                 'content' => 'Which operator returns true if the two compared values are not equal?',
                 'difficulty' => 6,
+                'amount' => '2000'
             ],
             [
                 'content' => 'Which statement is the correct way to create a variable called rate and assign it the value 100?',
                 'difficulty' => 6,
+                'amount' => '2000'
             ],
             [
                 'content' => 'How would you reference the string \'avenue\' in the code shown?',
                 'difficulty' => 7,
+                'amount' => '4000'
             ],
             [
                 'content' => 'When would you use a conditional statement?',
                 'difficulty' => 7,
+                'amount' => '4000'
             ],
             [
                 'content' => 'What would be the result in the console of running this code: for (var i=0; i<5; i++){ console.log(i); }',
                 'difficulty' => 8,
+                'amount' => '8000'
             ],
             [
                 'content' => 'Which of the following operators can be used to do a short-circuit evaluation?',
                 'difficulty' => 8,
+                'amount' => '8000'
             ],
             [
                 'content' => 'What does the following expression evaluate to: [] == []',
                 'difficulty' => 9,
+                'amount' => '16000'
             ],
             [
                 'content' => 'Which statement is true about Functional Programming?',
                 'difficulty' => 9,
+                'amount' => '16000'
             ],
         ]);
 

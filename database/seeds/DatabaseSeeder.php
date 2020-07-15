@@ -572,7 +572,11 @@ class DatabaseSeeder extends Seeder
                 'answer' => "[A-Za-z]*\S+\w+",
                 "correct" => true,
             ],
-
+            [
+                'question_id' => 21,
+                'answer' => "[A-Za-z]*\s+\w+",
+                "correct" => false,
+            ],
             // difficulty 11
             [
                 'question_id' => 22,

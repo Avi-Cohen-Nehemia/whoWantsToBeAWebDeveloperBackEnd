@@ -59,6 +59,11 @@ class DatabaseSeeder extends Seeder
                 'amount' => '1000'
             ],
             [
+                'content' => 'Which of the following is not a tag used in HTML tables?',
+                'difficulty' => 5,
+                'amount' => '1000'
+            ],
+            [
                 'content' => 'Which operator returns true if the two compared values are not equal?',
                 'difficulty' => 6,
                 'amount' => '2000'
@@ -97,6 +102,36 @@ class DatabaseSeeder extends Seeder
                 'content' => 'Which statement is true about Functional Programming?',
                 'difficulty' => 9,
                 'amount' => '16000'
+            ],
+            [
+                'content' => 'What does CORS stand for?',
+                'difficulty' => 10,
+                'amount' => '32000'
+            ],
+            [
+                'content' => 'Which of the following regular expressions would NOT match \'question answer\'?',
+                'difficulty' => 10,
+                'amount' => '32000'
+            ],
+            [
+                'content' => 'Which of the following is a valid Javascript string method?',
+                'difficulty' => 11,
+                'amount' => '64000'
+            ],
+            [
+                'content' => 'What is an example of dynamic binding?',
+                'difficulty' => 11,
+                'amount' => '64000'
+            ],
+            [
+                'content' => 'What is the title that accompanies the 304 HTTP status code?',
+                'difficulty' => 12,
+                'amount' => '125000'
+            ],
+            [
+                'content' => 'At which company was Javascript created?',
+                'difficulty' => 12,
+                'amount' => '125000'
             ],
         ]);
 
@@ -312,172 +347,312 @@ class DatabaseSeeder extends Seeder
                 'answer' => "Sudo classes",
                 "correct" => false,
             ],
+            [
+                'question_id' => 11,
+                'answer' => "<tcol>",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 11,
+                'answer' => "<th>",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 11,
+                'answer' => "<td>",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 11,
+                'answer' => "<tr>",
+                "correct" => false,
+            ],
 
             // difficulty 6
             [
-                'question_id' => 11,
+                'question_id' => 12,
                 'answer' => ">=<",
                 "correct" => false,
             ],
             [
-                'question_id' => 11,
+                'question_id' => 12,
                 'answer' => "===",
                 "correct" => false,
             ],
             [
-                'question_id' => 11,
+                'question_id' => 12,
                 'answer' => "==!",
                 "correct" => false,
             ],
             [
-                'question_id' => 11,
+                'question_id' => 12,
                 'answer' => "!==",
                 "correct" => true,
             ],
             [
-                'question_id' => 12,
+                'question_id' => 13,
                 'answer' => "let rate = 100;",
                 "correct" => true,
             ],
             [
-                'question_id' => 12,
+                'question_id' => 13,
                 'answer' => "let 100 = rate;",
                 "correct" => false,
             ],
             [
-                'question_id' => 12,
+                'question_id' => 13,
                 'answer' => "100 = let rate;",
                 "correct" => false,
             ],
             [
-                'question_id' => 12,
+                'question_id' => 13,
                 'answer' => "rate = 100;",
                 "correct" => false,
             ],
 
             // difficulty 7
             [
-                'question_id' => 13,
+                'question_id' => 14,
                 'answer' => "roadTypes.2",
                 "correct" => false,
             ],
             [
-                'question_id' => 13,
+                'question_id' => 14,
                 'answer' => "roadTypes[3]",
                 "correct" => false,
             ],
             [
-                'question_id' => 13,
+                'question_id' => 14,
                 'answer' => "roadTypes.3",
                 "correct" => false,
             ],
             [
-                'question_id' => 13,
+                'question_id' => 14,
                 'answer' => "roadTypes[2]",
                 "correct" => true,
             ],
             [
-                'question_id' => 14,
+                'question_id' => 15,
                 'answer' => "When you want to reuse a set of statements multiple times",
                 "correct" => false,
             ],
             [
-                'question_id' => 14,
+                'question_id' => 15,
                 'answer' => "When you want your code to choose between multiple options",
                 "correct" => true,
             ],
             [
-                'question_id' => 14,
+                'question_id' => 15,
                 'answer' => "When you want to group data together",
                 "correct" => false,
             ],
             [
-                'question_id' => 14,
+                'question_id' => 15,
                 'answer' => "When you want to loop through a group of statement",
                 "correct" => false,
             ],
 
             // difficulty 8
             [
-                'question_id' => 15,
+                'question_id' => 16,
                 'answer' => "12345",
                 "correct" => false,
             ],
             [
-                'question_id' => 15,
+                'question_id' => 16,
                 'answer' => "1234",
                 "correct" => false,
             ],
             [
-                'question_id' => 15,
+                'question_id' => 16,
                 'answer' => "01234",
                 "correct" => true,
             ],
             [
-                'question_id' => 15,
+                'question_id' => 16,
                 'answer' => "012345",
                 "correct" => false,
             ],
             [
-                'question_id' => 16,
+                'question_id' => 17,
                 'answer' => "++",
                 "correct" => false,
             ],
             [
-                'question_id' => 16,
+                'question_id' => 17,
                 'answer' => "%",
                 "correct" => false,
             ],
             [
-                'question_id' => 16,
+                'question_id' => 17,
                 'answer' => "==",
                 "correct" => false,
             ],
             [
-                'question_id' => 16,
+                'question_id' => 17,
                 'answer' => "||",
                 "correct" => true,
             ],
 
             // difficulty 9
             [
-                'question_id' => 17,
+                'question_id' => 18,
                 'answer' => "True",
                 "correct" => false,
             ],
             [
-                'question_id' => 17,
+                'question_id' => 18,
                 'answer' => "False",
                 "correct" => true,
             ],
             [
-                'question_id' => 17,
+                'question_id' => 18,
                 'answer' => "undefined",
                 "correct" => false,
             ],
             [
-                'question_id' => 17,
+                'question_id' => 18,
                 'answer' => "[]",
                 "correct" => false,
             ],
             [
-                'question_id' => 18,
+                'question_id' => 19,
                 'answer' => "Every object in the program has to be a function",
                 "correct" => false,
             ],
             [
-                'question_id' => 18,
+                'question_id' => 19,
                 'answer' => "Code is grouped with the state it modifies.",
                 "correct" => false,
             ],
             [
-                'question_id' => 18,
-                'answer' => "Side effecs are not allowed",
+                'question_id' => 19,
+                'answer' => "Side effects are not allowed",
                 "correct" => true,
             ],
             [
-                'question_id' => 18,
+                'question_id' => 19,
                 'answer' => "Everything has to be globally scoped",
+                "correct" => false,
+            ],
+
+            // difficulty 10
+            [
+                'question_id' => 20,
+                'answer' => "Cross Output Resource Sharing",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 20,
+                'answer' => "Combined Origin Request Source",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 20,
+                'answer' => "Core Output Resource Support",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 20,
+                'answer' => "Cross Origin Resource Sharing",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 21,
+                'answer' => "[A-Za-z]*\s\w{3,10}",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 21,
+                'answer' => "\w+\s+\w+",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 21,
+                'answer' => "[A-Za-z]*\S+\w+",
+                "correct" => true,
+            ],
+
+            // difficulty 11
+            [
+                'question_id' => 22,
+                'answer' => "padEnd()",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 22,
+                'answer' => "combine()",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 22,
+                'answer' => "pad()",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 22,
+                'answer' => "ends()",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 23,
+                'answer' => "Any method",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 23,
+                'answer' => "Compiling",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 23,
+                'answer' => "Method overloading",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 23,
+                'answer' => "Method overriding",
+                "correct" => true,
+            ],
+            // difficulty 12
+            [
+                'question_id' => 24,
+                'answer' => "Switch Proxy",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 24,
+                'answer' => "Moved Permanently",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 24,
+                'answer' => "Not Modified",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 24,
+                'answer' => "Temporary Redirect",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 25,
+                'answer' => "Netscape",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 25,
+                'answer' => "Zend Technologies",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 25,
+                'answer' => "Sun Micosystems",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 25,
+                'answer' => "Research Software Ltd.",
                 "correct" => false,
             ],
         ]);

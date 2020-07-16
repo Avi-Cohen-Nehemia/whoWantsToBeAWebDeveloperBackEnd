@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Questions;
 use App\Http\Controllers\API\Answers;
+use App\Http\Controllers\API\Games;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/questions', [Questions::class, "index"]);
 Route::get('/questions/{difficulty}', [Questions::class, "show"]);
+
+Route::get('/games/statistics', [Games::class, "show"]);

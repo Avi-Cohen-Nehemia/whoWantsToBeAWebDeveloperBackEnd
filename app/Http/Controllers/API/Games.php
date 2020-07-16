@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Game;
+use App\Http\Resources\API\GameResource;
 
 class Games extends Controller
 {
@@ -26,7 +27,11 @@ class Games extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $game = Game::create($data);
+
+        return new GameResource($game);
     }
 
     /**

@@ -25,3 +25,4 @@ Route::get('/questions', [Questions::class, "index"]);
 Route::get('/questions/{difficulty}', [Questions::class, "show"]);
 
 Route::get('/games/statistics', [Games::class, "show"]);
+Route::post('/games/statistics', [Games::class, "store"]);

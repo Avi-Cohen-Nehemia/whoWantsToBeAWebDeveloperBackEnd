@@ -133,6 +133,26 @@ class DatabaseSeeder extends Seeder
                 'difficulty' => 12,
                 'amount' => '125000'
             ],
+            [
+                'content' => 'What change will the following command make to the staging area files? \'git rm --cached testfile.js\'',
+                'difficulty' => 13,
+                'amount' => '250000'
+            ],
+            [
+                'content' => 'When dealing with JSON web Tokens (JWTs), what is a claim?',
+                'difficulty' => 13,
+                'amount' => '250000'
+            ],
+            [
+                'content' => 'In JavaScript, dates are expressed in milliseconds since what year?',
+                'difficulty' => 14,
+                'amount' => '500000'
+            ],
+            [
+                'content' => 'In Git, why would you use a pre-receive hook in your remote repository?',
+                'difficulty' => 14,
+                'amount' => '500000'
+            ],
         ]);
 
         // Answers
@@ -618,6 +638,7 @@ class DatabaseSeeder extends Seeder
                 'answer' => "Method overriding",
                 "correct" => true,
             ],
+
             // difficulty 12
             [
                 'question_id' => 24,
@@ -657,6 +678,90 @@ class DatabaseSeeder extends Seeder
             [
                 'question_id' => 25,
                 'answer' => "Research Software Ltd.",
+                "correct" => false,
+            ],
+
+            // difficulty 13
+            [
+                'question_id' => 26,
+                'answer' => "testfile.js will be removed from the staging area but its changes will still be tracked",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 26,
+                'answer' => "testfile.js will be removed from the staging area and its changes no longer tracked",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 26,
+                'answer' => "A copy of testfile.js will be cached on your desktop",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 26,
+                'answer' => "The current copy of testfile.js will be saved in the staging area",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 27,
+                'answer' => "Ownership",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 27,
+                'answer' => "a permission",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 27,
+                'answer' => "an integer",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 27,
+                'answer' => "data in the token",
+                "correct" => true,
+            ],
+
+            // difficulty 14
+            [
+                'question_id' => 28,
+                'answer' => "1969",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 28,
+                'answer' => "1970",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 28,
+                'answer' => "1971",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 28,
+                'answer' => "1972",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 29,
+                'answer' => "You wouldn't, you would use it in the local repository",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 29,
+                'answer' => "To fire a script after updates are made to the remote repository",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 29,
+                'answer' => "To invoke a hook script when commits are pushed but before any references are updated",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 29,
+                'answer' => "To debug all commit tags and release versions",
                 "correct" => false,
             ],
         ]);

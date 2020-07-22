@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
                 'amount' => '200'
             ],
             [
-                'content' => 'which tag is used to create an unordered list?',
+                'content' => 'Which tag is used to create an unordered list?',
                 'difficulty' => 2,
                 'amount' => '200'
             ],
@@ -766,7 +766,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'question_id' => 29,
-                'answer' => "To invoke a hook script when commits are pushed but before any references are updated",
+                'answer' => "Invoke a hook script when commits pushed & before references updated",
                 "correct" => true,
             ],
             [

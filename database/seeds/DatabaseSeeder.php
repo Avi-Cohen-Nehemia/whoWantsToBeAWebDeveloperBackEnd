@@ -694,22 +694,22 @@ class DatabaseSeeder extends Seeder
             // difficulty 13
             [
                 'question_id' => 26,
-                'answer' => "testfile.js will be removed from the staging area but its changes will still be tracked",
+                'answer' => "testfile.js removed from staging area, changes still tracked",
                 "correct" => false,
             ],
             [
                 'question_id' => 26,
-                'answer' => "testfile.js will be removed from the staging area and its changes no longer tracked",
+                'answer' => "testfile.js removed from staging area & changes no longer tracked",
                 "correct" => true,
             ],
             [
                 'question_id' => 26,
-                'answer' => "A copy of testfile.js will be cached on your desktop",
+                'answer' => "Copy of testfile.js cached on your desktop",
                 "correct" => false,
             ],
             [
                 'question_id' => 26,
-                'answer' => "The current copy of testfile.js will be saved in the staging area",
+                'answer' => "Current copy of testfile.js saved in the staging area",
                 "correct" => false,
             ],
             [

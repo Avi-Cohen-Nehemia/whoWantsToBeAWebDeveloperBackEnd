@@ -153,6 +153,16 @@ class DatabaseSeeder extends Seeder
                 'difficulty' => 14,
                 'amount' => '500000'
             ],
+            [
+                'content' => 'What programming language is this written in: \'Hello, <>\'World! print?',
+                'difficulty' => 15,
+                'amount' => '1000000'
+            ],
+            [
+                'content' => 'What programming language is this written in: ? "Hello world!"',
+                'difficulty' => 15,
+                'amount' => '1000000'
+            ],
         ]);
 
         // Answers
@@ -762,6 +772,47 @@ class DatabaseSeeder extends Seeder
             [
                 'question_id' => 29,
                 'answer' => "To debug all commit tags and release versions",
+                "correct" => false,
+            ],
+            // difficulty 15
+            [
+                'question_id' => 30,
+                'answer' => "Gecho",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 30,
+                'answer' => "TAL",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 30,
+                'answer' => "Imba",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 30,
+                'answer' => "Jade",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 31,
+                'answer' => "Kitten",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 31,
+                'answer' => "Harbour",
+                "correct" => true,
+            ],
+            [
+                'question_id' => 31,
+                'answer' => "Lingo",
+                "correct" => false,
+            ],
+            [
+                'question_id' => 31,
+                'answer' => "Joy",
                 "correct" => false,
             ],
         ]);

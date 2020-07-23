@@ -1,15 +1,172 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Who Wants To Be A Web Developer
+API containing multiple choice Web Development/coding questions.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+To see an example for how you can use this API, visit the front-end part of this project which can be found here:  
+https://avi-cohen-nehemia.github.io/whoWantsToBeAWebDeveloperFrontEnd/#/
 
-## About Laravel
+## background
+The back-end part of a full stack application built to sharpen our skills in PHP, building REST api using Laravel, and collaborating on a group project.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tech Stack / Framworks
+- PHP
+- Laravel
+- REST API
+- EC2 AWS deployment
+
+## MVP
+- Create 'Questions' and 'Answers' tables and establish a 'one to many' relationship between them.
+- Make a GET route that returns a question and the 4 answers that are associated with it.
+
+## Additional Features Implemented
+- [x] Create a GET route that returns a random question with a specific difficulty level.
+- [x] Create a DatabaseSeeder.
+- [x] Create a 'Games' table which contains data about previous played games.
+- [x] Create a POST route that stores the difficulty level the player reached when the game is over.
+- [x] Create a GET route that returns how well the player did compared to previous players.
+- [x] Added Resource to all get requests.
+
+## Getting Started:
+The Virtual Machine is already configured from ScotchBox, and the Vagrant Box set up to use Laravel's Homestead.
+
+To get started:
+1. Clone this repo and `cd` into folder
+2. In your new directory, run `composer install`
+3. Run `vendor/bin/homestead make`
+4. Run: `cp .env.example .env`
+5. inside .env change the db name, user and password to `homestead`, `root`, `secret`
+6. in `homestead.yaml` change memory to 512
+7. Run `vagrant up`
+8. Login to the virtual machine: `vagrant ssh` (if asked for password it's 'vagrant')
+9. Navigate `code` folder: `cd code`
+10. Generate a new artisan key: `artisan key:generate`
+11. Run the database migration: `artisan migrate`
+12. Seed the database with data: `artisan db:seed`
+
+Visit `http://homestead.test` on Mac or `http://localhost:8000` on Windows:
+
+## General
+All requests should:
+* Use the basename [`http://ec2-18-130-184-16.eu-west-2.compute.amazonaws.com/api`]
+* Be sent using JSON and with the `Accept: application/json` header
+  
+## End Points
+- `/api/questions`
+- `/api/games`
+
+### Questions
+
+### `GET /questions`
+Will return a summary list of campsites associated with a region with the given id
+
+#### example
+```
+http://ec2-18-130-184-16.eu-west-2.compute.amazonaws.com/api/questions
+```
+#### returns
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "difficulty": "1",
+            "content": "Which of the following is the paragraph tag?",
+            "amount": "100",
+            "answers": [
+                {
+                    "answer": "<p>",
+                    "correct": 1
+                },
+                {
+                    "answer": "<ol>",
+                    "correct": 0
+                },
+                {
+                    "answer": "<par>",
+                    "correct": 0
+                },
+                {
+                    "answer": "<fig>",
+                    "correct": 0
+                }
+            ]
+        },
+        etc...
+    ]
+}
+```  
+
+### `GET /questions/{difficulty}`
+
+Will return a single random question, from the available questions with the diffuculty specified in the request.
+
+#### example
+```
+http://ec2-18-130-184-16.eu-west-2.compute.amazonaws.com/api/questions/5
+```
+
+#### returns
+```
+{
+    "data": [
+        {
+            "id": 11,
+            "difficulty": "5",
+            "content": "Which of the following is not a tag used in HTML tables?",
+            "amount": "1000",
+            "answers": [
+                {
+                    "answer": "<tcol>",
+                    "correct": 1
+                },
+                {
+                    "answer": "<th>",
+                    "correct": 0
+                },
+                {
+                    "answer": "<td>",
+                    "correct": 0
+                },
+                {
+                    "answer": "<tr>",
+                    "correct": 0
+                }
+            ]
+        }
+    ]
+}
+```  
+
+### Statistics
+
+### `GET /games/statistics`
+
+Will return a number, represnting the percentage of players who did worse than the player who just finished a game.
+
+### example
+```
+http://ec2-18-130-184-16.eu-west-2.compute.amazonaws.com/api/games/statistics
+```
+
+### returns
+```
+36
+```
+
+### `POST /games/statistics`
+
+Post an integer between 1 and 15 that represents the final score of a finished game.
+
+### example
+```
+axios.post('games/statistics', {score: currentDifficulty})
+```
+
+---
+
+## Documentation
+
+### Laravel:
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
@@ -21,65 +178,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-
-### Community Sponsors
-
-<a href="https://op.gg"><img src="http://opgg-static.akamaized.net/icon/t.rectangle.png" width="150"></a>
-
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [云软科技](http://www.yunruan.ltd/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Scotch Box:
+* Check out the official docs at: [box.scotch.io](https://box.scotch.io)
+* [Read the getting started article](https://scotch.io/bar-talk/introducing-scotch-box-a-vagrant-lamp-stack-that-just-works)
+* [Read the 3.5 release article](https://scotch.io/bar-talk/announcing-scotch-box-v35-and-scotch-box-pro-v15-the-big-switcheroo)

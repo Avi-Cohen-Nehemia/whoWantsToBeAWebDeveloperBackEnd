@@ -1,11 +1,10 @@
 # Who Wants To Be A Web Developer
 API containing multiple choice Web Development/coding questions.
 
-To see an example for how you can use this API, visit the front-end part of this project which can be found here:  
-https://avi-cohen-nehemia.github.io/whoWantsToBeAWebDeveloperFrontEnd/#/
-
 ## background
-The back-end part of a full stack application built to sharpen our skills in PHP, building REST api using Laravel, and collaborating on a group project.
+The back-end part of a full stack application built to sharpen our skills in PHP, building REST api using Laravel, and collaborating on a group project.  
+This app was created by [Avi Cohen-Nehemia](https://github.com/Avi-Cohen-Nehemia) and [Maddy McMahon](https://github.com/mdm106).  
+To see an example for how you can use this API, visit the front-end part of this project which can be found [here](https://avi-cohen-nehemia.github.io/whoWantsToBeAWebDeveloperFrontEnd/#/)
 
 ## Tech Stack / Framworks
 - PHP
